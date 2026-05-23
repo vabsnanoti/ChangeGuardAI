@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
 
 import Navbar from './components/Navbar';
 import RiskCard from './components/RiskCard';
@@ -18,45 +17,26 @@ import './styles.css';
 
 function App() {
 
-  const [data, setData] = useState(null);
+  const data = {
 
-  useEffect(() => {
+    analysis: {
 
-    axios.post('http://localhost:8000/analyze-change', {
+      risk_score: 85,
 
-      change_id: 'CHG001245',
+      risk_level: 'HIGH',
 
-      service: 'payment-service',
+      recommendation: 'DELAY DEPLOYMENT',
 
-      environment: 'production',
-
-      deployment_time: 'Friday 20:00',
-
-      changes: [
-        'database migration',
-        'new payment API'
+      factors: [
+        'Production deployment',
+        'Weekend deployment risk',
+        'Database migration',
+        'Historical incident history'
       ]
 
-    })
-    .then(response => {
+    }
 
-      setData(response.data);
-
-    })
-    .catch(error => {
-
-      console.error(error);
-
-    });
-
-  }, []);
-
-
-  if (!data) {
-
-    return <h1>Loading ChangeGuard AI Dashboard...</h1>;
-
-  }
+  };
 
 
   return (
