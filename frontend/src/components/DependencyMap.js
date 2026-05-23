@@ -1,8 +1,5 @@
 import React from 'react';
 
-import dependencyMap from '../assets/dependency-map.png';
-
-
 function DependencyMap() {
 
   return (
@@ -12,7 +9,7 @@ function DependencyMap() {
       <h2>Dependency Map</h2>
 
       <img
-        src={dependencyMap}
+        src="/dependency-map.png"
         alt="dependency-map"
         style={{
           width: '400px',
@@ -20,15 +17,6 @@ function DependencyMap() {
           margin: 'auto'
         }}
       />
-
-      <p
-        style={{
-          textAlign: 'center',
-          marginTop: '10px'
-        }}
-      >
-        Service Dependency Architecture
-      </p>
 
     </div>
   );
