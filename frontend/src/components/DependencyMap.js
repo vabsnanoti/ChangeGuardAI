@@ -1,16 +1,23 @@
 import React from 'react';
 
+import dependencyMap from '../assets/dependency-map.png';
+
+
 function DependencyMap() {
 
   return (
+
     <div className="card">
 
       <h2>Dependency Map</h2>
 
       <img
-        src="https://miro.medium.com/v2/resize:fit:1200/1*P6m0gS4kQ2XjZw5ZK4mNlg.png"
+        src={dependencyMap}
         alt="dependency-map"
-        width="700"
+        style={{
+          width: '100%',
+          borderRadius: '10px'
+        }}
       />
 
     </div>
