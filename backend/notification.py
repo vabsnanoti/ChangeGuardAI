@@ -4,11 +4,11 @@ from email.mime.text import MIMEText
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
-SMTP_USERNAME = "your_email@gmail.com"
-SMTP_PASSWORD = "your_app_password"
+SMTP_USERNAME = "vabsnanoti@gmail.com"
+SMTP_PASSWORD = "oqtdievbzyuvbngw"
 
-FROM_EMAIL = "your_email@gmail.com"
-TO_EMAIL = "cab-team@company.com"
+FROM_EMAIL = "changegard-bot@gmail.com"
+TO_EMAIL = "vabsnanoti@gmail.com"
 
 
 def send_email(change_id, risk_level, recommendation):
